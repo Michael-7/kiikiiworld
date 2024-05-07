@@ -3,6 +3,8 @@ import {
   Scripts,
 } from "@remix-run/react";
 
+import "./index.scss";
+
 export function HydrateFallback() {
   return (
     <>

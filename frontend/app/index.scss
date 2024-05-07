@@ -1,0 +1,51 @@
+
+@font-face {
+  font-family: "jetbrainsmono";
+  src: local('jetbrainsmono'), url(./assets/JetBrainsMono.ttf) format('truetype');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+:root {
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-primary: #7fffd4;
+
+  --spacing-xsm: .25rem; /// 4px spacing-1
+  --spacing-sm: .5rem; // 8px spacing-2
+  --spacing-md: 1rem; // 16px spacing-3
+  --spacing-lg: 1.5rem; // 24px spacing-4
+  --spacing-xl: 2rem; // 32px spacing-5
+
+  --block-spacing-sm: 20px;
+  --block-spacing-md: 40px; // spacing-6
+  --block-spacing-lg: 60px;
+  --block-spacing-xl: 80px;
+
+  --nav-height: 64px;
+  --content-width: 574px;
+
+  --primary-font: 'Open Sans', sans-serif;
+  --accent-font: 'jetbrainsmono';
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--accent-font);
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-family: var(--accent-font);
+  font-size: 1.2rem;
+}
+
+#app {
+  position: relative;
+}

@@ -1,0 +1,13 @@
+#nav {
+  .container {
+    position: fixed;
+    width: 100%;
+    height: var(--nav-height);
+    background: var(--color-light);
+  }
+  
+  .content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,12 @@
+#home {
+  .container {
+    padding-top: var(--nav-height);
+    width: 100%;
+    height: calc(100vh);
+  }
+  
+  .content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+}

@@ -1,9 +1,12 @@
-import type { MetaFunction } from "@remix-run/node";
+import { useParams } from "@remix-run/react";
 
 export default function Index() {
+  const params = useParams();
+
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Hello world!</h1>
+      <h2>{params.contentId}</h2>
       <ul>
         <li>
           <a
