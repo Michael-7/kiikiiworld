@@ -17,11 +17,11 @@ export default function Menu() {
   return (
     <div className="menu">
       <Link className={"menu__link " + getMenuItemClass(searchParams, '')} to="/">everything</Link>
-      <Link className={"menu__link " + getMenuItemClass(searchParams, 'videos')} to="?contentType=videos">videos</Link>
-      <Link className={"menu__link " + getMenuItemClass(searchParams, 'photos')} to="?contentType=photos">photos</Link>
-      <Link className={"menu__link " + getMenuItemClass(searchParams, 'quotes')} to="?contentType=quotes">quotes</Link>
-      <Link className={"menu__link " + getMenuItemClass(searchParams, 'trips')} to="?contentType=trips">trips</Link>
-      <Link className={"menu__link " + getMenuItemClass(searchParams, 'stories')} to="?contentType=stories">stories</Link>
+      <Link className={"menu__link " + getMenuItemClass(searchParams, 'video')} to="?contentType=video">videos</Link>
+      <Link className={"menu__link " + getMenuItemClass(searchParams, 'photo')} to="?contentType=photo">photos</Link>
+      <Link className={"menu__link " + getMenuItemClass(searchParams, 'quote')} to="?contentType=quote">quotes</Link>
+      {/* <Link className={"menu__link " + getMenuItemClass(searchParams, 'projects')} to="?contentType=projects">projects</Link>
+      <Link className={"menu__link " + getMenuItemClass(searchParams, 'stories')} to="?contentType=stories">stories</Link> */}
     </div>
   )
 }

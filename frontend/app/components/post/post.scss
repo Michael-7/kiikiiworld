@@ -1,0 +1,33 @@
+.post {
+  width: 100%;
+
+  &__content {
+    max-width: 100%;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xsm);
+  }
+
+  &__title {
+    font-family: var(--accent-font);
+    font-size: var(--font-size-sm);
+  }
+
+  &__date {
+    font-family: var(--accent-font);
+    font-size: var(--font-size-sm);
+  }
+
+  &__video {
+    border-radius: 4px;
+  }
+
+  &__quote {
+    margin-bottom: var(--spacing-sm);
+  }
+}
