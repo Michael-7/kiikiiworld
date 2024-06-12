@@ -1,23 +1,23 @@
 export interface PostBase {
   type: PostType;
-  date: string;
+  displayDate: string;
   title: string;
   tags: string[];
 }
 
 export interface Video extends PostBase {
   type: PostType.video;
-  url: string;
+  videoUrl: string;
 }
 
 export interface Photo extends PostBase {
   type: PostType.photo;
-  url: string;
+  image: string;
 }
 
 export interface Quote extends PostBase {
   type: PostType.quote;
-  quote: string;
+  markdown: string;
 }
 
 export interface Story extends PostBase {
