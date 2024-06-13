@@ -3,12 +3,10 @@ import "./home.scss";
 import Post from "../post/post";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "@remix-run/react";
+import axios, { AxiosResponse } from "axios";
 
-async function getPosts(): Promise<Array<Video|Photo|Quote>>  {
-  const response = await fetch("http://localhost:8055/items/posts?sort=displayDate");
-  const movies = await response.json();
-
-  return movies.data
+async function getPosts(): Promise<AxiosResponse>  {
+  return axios.get("http://localhost:8055/items/posts?sort=displayDate");
 }
 
 function postListHtml(posts: Array<Video|Photo|Quote>, filter: string|null) {
@@ -16,7 +14,7 @@ function postListHtml(posts: Array<Video|Photo|Quote>, filter: string|null) {
   if (filter) {
     filteredPosts = posts.filter(p => p.type === filter);
   }
-  return filteredPosts.map((post, id) => <Post post={post} key={id}></Post>)
+  return filteredPosts.map((post, id) => <Post post={post} autoScale={false} key={id}></Post>)
 }
 
 export default function Home() {
@@ -26,10 +24,11 @@ export default function Home() {
 
   useEffect(() => {
     getPosts().then(result => {
-      setPosts(result)
+      console.log(result)
+      setPosts(result.data.data);
       setLoading(false);
     })
-  }, [isloading])
+  }, [setPosts, setLoading])
 
   return (
     <div id="home">

@@ -1,8 +1,10 @@
 export interface PostBase {
+  id: number;
   type: PostType;
   displayDate: string;
   title: string;
   tags: string[];
+  likes: number;
 }
 
 export interface Video extends PostBase {

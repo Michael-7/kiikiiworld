@@ -1,5 +1,7 @@
 .post {
   width: 100%;
+  // width: auto;
+  cursor: pointer;
 
   &__content {
     max-width: 100%;
@@ -29,5 +31,12 @@
 
   &__quote {
     margin-bottom: var(--spacing-sm);
+  }
+
+  &__image {
+    width: auto;
+    height: auto;
+    max-width: calc(100vw - var(--spacing-md));
+    max-height: calc(100vh - var(--spacing-md));
   }
 }
