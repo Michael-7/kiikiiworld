@@ -46,6 +46,8 @@ export default function Post({post, autoScale}: {post: Photo|Video|Quote, autoSc
       <div className="post__details">
         <span className="post__title">{post.title}</span>
         <span className="post__date">{formatDate(post.displayDate)}</span>
+      </div>
+      <div className="post__details">
         <LikeButton postId={post.id} likes={post.likes}></LikeButton>
       </div>
     </div>

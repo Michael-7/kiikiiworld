@@ -1,0 +1,9 @@
+.like-button {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    padding: 0 4px;
+
+    &--active {
+        background-color: var(--color-primary);
+    }
+}
