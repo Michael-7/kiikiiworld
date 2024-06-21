@@ -1,0 +1,15 @@
+- name: Video
+  slug: video
+
+- name: Photo
+  slug: photo
+
+- name: Project
+  slug: project
+
+- name: Story
+  slug: story
+
+- name: Quote
+  slug: quote
+  

@@ -10,13 +10,23 @@ const posts = defineCollection({
     pattern: 'blog/**/*.mdx',
     schema: s.object({
         slug: s.path(),
+        category: s.string().default('Photo'),
         title: s.string(),
-        description: s.string(),
         date: s.isodate(),
-        video: s.string(),
-        image: s.image(),
+        video: s.string().optional(),
+        image: s.string().optional(),
+        description: s.string().optional(),
         body: s.mdx(),
     }).transform(computedFields)
+});
+
+const categories = defineCollection({
+    name: 'category',
+    pattern: 'categories/index.yml',
+    schema: s.object({
+        name: s.string().max(20),
+        slug: s.slug('global', ['admin', 'login']),
+    })
 });
 
 export default defineConfig({
@@ -28,7 +38,7 @@ export default defineConfig({
         name: '[name]-[hash:6].[ext]',
         clean: true,
     },
-    collections: { posts },
+    collections: { posts, categories },
     mdx: {
         rehypePlugins: [],
         remarkPlugins: [],

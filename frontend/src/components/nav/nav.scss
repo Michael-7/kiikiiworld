@@ -1,0 +1,38 @@
+#nav {
+  .container {
+    position: fixed;
+    container-type: inline-size;
+    container-name: nav;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+  }
+  
+  .content {
+    max-width: var(--content-width);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: var(--spacing-sm);
+    font-family: var(--accent-font);
+    font-weight: 800;
+  }
+
+  h1 {
+    font-size: 5rem;
+    color: var(--color-dark);
+    font-style: italic;
+  }
+
+  // --content-width
+  @container nav (width < 574px) {
+    .content {
+      height: 10vw;
+    }
+
+    h1 {
+      font-size: 12vw;
+    }
+  }
+}
