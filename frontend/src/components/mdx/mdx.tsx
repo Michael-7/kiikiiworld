@@ -1,4 +1,4 @@
-import "./mdx.scss"
+import "./mdx.module.scss"
 import * as runtime from 'react/jsx-runtime'
 
 const sharedComponents = {

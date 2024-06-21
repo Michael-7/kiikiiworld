@@ -1,6 +1,6 @@
 "use client"
 
-import "./menu.scss";
+import "./menu.module.scss";
 import Link from 'next/link';
 import { categories } from '#site/content';
 import { useSearchParams } from "next/navigation";

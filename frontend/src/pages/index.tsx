@@ -1,6 +1,6 @@
-import "./index.scss";
-import "../css/reset.scss";
-import "../css/globals.scss";
+import "./index.module.scss";
+import "../css/reset.module.scss";
+import "../css/globals.module.scss";
 import { posts, categories } from '#site/content';
 import Post from "@/components/post/post";
 import { useSearchParams } from "next/navigation";
