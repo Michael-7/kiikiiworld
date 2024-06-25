@@ -21,8 +21,8 @@
   --nav-height: 96px;
   --content-width: 640px;
 
-  --primary-font: 'Open Sans', sans-serif;
-  --accent-font: 'JetBrains Mono';
+  // --primary-font --> Are avaliable through dynamic font loader
+  // --accent-font --> Are avaliable through dynamic font loader
 
   --font-size-sm: .85rem;
 }
@@ -43,7 +43,7 @@ body {
   padding: var(--spacing-sm);
 }
 
-#__next {
+#__next, .app {
   display: contents;
 }
 
