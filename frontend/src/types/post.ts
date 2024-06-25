@@ -1,5 +1,3 @@
-import { Categories } from "./categories";
-
 export default interface BasePost {
     slug: string,
     slugAsParams: string,
