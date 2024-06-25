@@ -1,4 +1,3 @@
-import "./post.module.scss";
 import BasePost from "@/types/post";
 import { Categories } from "@/types/categories";
 import { MDXContent } from "../mdx/mdx";

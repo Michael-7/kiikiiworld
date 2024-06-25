@@ -1,4 +1,3 @@
-import "./index.module.scss";
 import { posts, categories } from '#site/content';
 import Post from "@/components/post/post";
 import { useSearchParams } from "next/navigation";
@@ -33,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Nav></Nav>
-      <main>
+      <main id="index">
         <div className="post-container">
           <div className="post-list">
             {shownPosts.map(post => <Post key={post.slug} post={post}></Post>)}

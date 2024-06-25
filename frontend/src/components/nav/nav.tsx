@@ -1,5 +1,3 @@
-import "./nav.module.scss";
-
 export default function Nav() {
   return (
     <div id="nav">

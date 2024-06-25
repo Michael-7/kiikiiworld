@@ -1,4 +1,4 @@
-import "./mdx.module.scss"
+import styles from "./mdx.module.scss"
 import * as runtime from 'react/jsx-runtime'
 
 const sharedComponents = {
@@ -20,7 +20,7 @@ interface MDXProps {
 export const MDXContent = ({ code, components }: MDXProps) => {
   const Component = useMDXComponent(code)
   return (
-    <div id="mdx">
+    <div className={styles.mdx}>
         <Component components={{ ...sharedComponents, ...components }} />
     </div>
 )
