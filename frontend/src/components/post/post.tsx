@@ -2,13 +2,20 @@ import BasePost from "@/types/post";
 import { Categories } from "@/types/categories";
 import { MDXContent } from "../mdx/mdx";
 import Link from "next/link";
+import Image from 'next/image'
 
 function getPostSpecificHtml(post: BasePost) {
   switch (post.category) {
     case Categories.photo:
       if (post.image) {
-        return (<Link href={post.image && getImageUrl(post.image)}>
-          <img src={post.image && getImageUrl(post.image)} className="post__content" alt={post.title} />
+        return (
+        <Link href={post.image && getImageUrl(post.image)}>
+          <Image src={post.image && getImageUrl(post.image)}
+          className="post__image"
+          alt={post.title}
+          height="480"
+          width="640">
+          </Image>
         </Link>)
       }
     case Categories.quote:
