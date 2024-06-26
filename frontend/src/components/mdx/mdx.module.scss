@@ -16,7 +16,7 @@
   a {
     font-family: var(--primary-font);
     font-weight: 500;
-    color: var(--color-dark);
+    color: var(--color-text-on-primary);
     background-color: var(--color-primary);
     padding: 0 var(--spacing-xsm);
   }
@@ -41,7 +41,7 @@
     outline: none;
     border: none;
     height: 2px;
-    background-color: var(--color-grey);
+    background-color: var(--color-grey-light);
     margin: var(--spacing-md) 0;
   }
 
