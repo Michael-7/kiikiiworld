@@ -1,13 +1,14 @@
+import NextImg from "../next-img/next-img";
 import styles from "./mdx.module.scss"
 import * as runtime from 'react/jsx-runtime'
 
 const sharedComponents = {
-  // Add your global components here
+  NextImg,
 }
 
 // parse the Velite generated MDX code into a React component function
 const useMDXComponent = (code: string) => {
-  const fn = new Function(code)
+  const fn = new Function(code);
   return fn({ ...runtime }).default
 }
 

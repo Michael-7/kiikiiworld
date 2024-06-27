@@ -8,7 +8,7 @@ async function readFiles() {
 
   files.forEach(file => {
     if(file.includes('.jpg') || file.includes('.png')) {
-        sharp(`./format-img/${file}`).resize(860, undefined, {withoutEnlargement: true}).toFile(`./format-img/out/${file}`);
+        sharp(`./format-img/${file}`).resize(1200, undefined, {withoutEnlargement: true}).toFile(`./format-img/out/${file}`);
         console.log(file + ' done!');
       }
   });

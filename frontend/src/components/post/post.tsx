@@ -2,7 +2,7 @@ import BasePost from "@/types/post";
 import { Categories } from "@/types/categories";
 import { MDXContent } from "../mdx/mdx";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from "next/image";
 
 function getPostSpecificHtml(post: BasePost) {
   switch (post.category) {
@@ -22,15 +22,15 @@ function getPostSpecificHtml(post: BasePost) {
       return <MDXContent code={post.body} components={{}} />
     case Categories.video:
       return (
-        // <p>{post.video}</p>
         <iframe className="post__video"
           src={post.video}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen>
         </iframe>
-        )
+      )
     case Categories.story:
       return <MDXContent code={post.body} components={{}} />
     case Categories.project:
@@ -50,7 +50,7 @@ function formatDate(inputDate: string): string {
 }
 
 function getImageUrl(id: string): string {
-  return `/blog/${id}`
+  return `/blog/${id}`;
 }
 
 export default function Post({post}: {post: BasePost}) {
