@@ -37,3 +37,9 @@ next-env.d.ts
 
 # velite
 .velite
+
+#images
+format-img/*.jpg
+format-img/*.png
+format-img/out/*.jpg
+format-img/out/*.png
