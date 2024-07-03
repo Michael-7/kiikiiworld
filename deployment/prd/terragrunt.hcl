@@ -47,6 +47,21 @@ generate "versions" {
   EOF
 }
 
+generate "backend" {
+  path      = "backend.tf"
+  if_exists = "overwrite_terragrunt"
+  contents = <<EOF
+    terraform {
+      backend "s3" {
+        bucket         = "kiikiiworld-terraform-state"
+        key            = "${path_relative_to_include()}/terraform.tfstate"
+        region         = "eu-central-1"
+        encrypt        = true
+      }
+    }
+    EOF
+}
+
 inputs = merge(
   local.region_vars.locals,
   local.env_vars.locals,
