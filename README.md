@@ -20,6 +20,7 @@ In the future you could use the the terragrunt and terraform files to deploy the
 The route53 part is not done yet, if you get a domain you need to fix that part.
 
 To deploy everything at once run this is the `deployment/prd` folder
+
 ```bash
     terragrunt run-all apply
 ```

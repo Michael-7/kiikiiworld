@@ -6,6 +6,7 @@ import { Suspense, useEffect, useState } from "react";
 import Nav from "@/components/nav/nav";
 import Menu from "@/components/menu/menu";
 import BasePost from "@/types/post";
+import Head from 'next/head';
 
 
 
@@ -32,6 +33,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>kiikiiworld</title>
+      </Head>
       <Nav></Nav>
       <main id="index">
         <div className="post-container">

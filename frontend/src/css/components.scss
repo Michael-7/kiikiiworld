@@ -19,10 +19,6 @@
   }
   
   @media screen and (max-width: 574px) {
-    .post-container {
-      margin-top: 20vw;
-    }
-  
     .post-list {
       gap: var(--spacing-xl);
     }
@@ -32,25 +28,16 @@
 #post {
   .post {
     width: 100%;
-    // width: auto;
-    // cursor: pointer;
   
     &__content {
       max-width: 100%;
     }
 
     &__image {
-      // width: 10px;
       height: auto;
       width: 100%;
       max-width: 100%;
     }
-
-    // &__image-wrapper {
-    //   position: relative;
-    //   display: block;
-    //   width: 100%;
-    // }
   
     &__details {
       display: flex;
@@ -95,6 +82,7 @@
     display: flex;
     align-items: center;
     z-index: 1;
+    margin: var(--spacing-sm) 0;
   }
   
   .content {
@@ -108,20 +96,9 @@
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 1.66rem;
     color: var(--color-dark);
     font-style: italic;
-  }
-
-  // --content-width
-  @container nav (width < 640px) {
-    .content {
-      height: 10vw;
-    }
-
-    h1 {
-      font-size: 12vw;
-    }
   }
 }
 
