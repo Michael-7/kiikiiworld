@@ -1,47 +1,25 @@
-# templates/spa
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This template leverages [Remix SPA Mode](https://remix.run/docs/en/main/guides/spa-mode) and the [Remix Vite Plugin](https://remix.run/docs/en/main/guides/vite) to build your app as a Single-Page Application using [Client Data](https://remix.run/docs/en/main/guides/client-data) for all of your data loads and mutations.
+## Getting Started
 
-## Setup
+First, run the development server:
 
-```shellscript
-npx create-remix@latest --template remix-run/remix/templates/spa
-```
-
-## Development
-
-You can develop your SPA app just like you would a normal Remix app, via:
-
-```shellscript
+```bash
 npm run dev
 ```
 
-## Production
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-When you are ready to build a production version of your app, `npm run build` will generate your assets and an `index.html` for the SPA.
+## Formatting Images
+1. Put images in format-img folder.
+2. Run `node format-img.js` in the frontend folder.
+3. Move the images from the `/format-img/out` folder to the `public/blog` folder to use them.
 
-```shellscript
-npm run build
-```
+## Deployment
+In the future you could use the the terragrunt and terraform files to deploy the static site to AWS with Cloudfront and S3.
+The route53 part is not done yet, if you get a domain you need to fix that part.
 
-### Preview
-
-You can preview the build locally with [vite preview](https://vitejs.dev/guide/cli#vite-preview) to serve all routes via the single `index.html` file:
-
-```shellscript
-npm run preview
-```
-
-> [!IMPORTANT]
->
-> `vite preview` is not designed for use as a production server
-
-### Deployment
-
-You can then serve your app from any HTTP server of your choosing. The server should be configured to serve multiple paths from a single root `/index.html` file (commonly called "SPA fallback"). Other steps may be required if the server doesn't directly support this functionality.
-
-For a simple example, you could use [sirv-cli](https://www.npmjs.com/package/sirv-cli):
-
-```shellscript
-npx sirv-cli build/client/ --single
+To deploy everything at once run this is the `deployment/prd` folder
+```bash
+    terragrunt run-all apply
 ```
