@@ -23,6 +23,9 @@ Formatting images is good to optimize your website, when your images are too big
 2. Run `node format-img.js` in the `/frontend` folder.
 3. Move the images from the `/frontend/format-img/out` folder to the `/frontend/public/blog` folder to use them.
 
+## Styling
+The colors of the website change if your device is set on dark mode or light mode. You can change the colors and spacing of the website in this file `/frontend/src/css/globals.scss`. changing the `--content-width` to `1000px` will scale your images bigger when viewing them on a desktop for example. If you don't want the theme to be different if your device is on dark mode you can remove the `@media (prefers-color-scheme: dark)` section.
+
 ## Deployment
 How do you get it live?
 
